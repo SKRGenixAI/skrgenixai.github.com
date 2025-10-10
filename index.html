@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKRGenixAI - Your Gateway to AI Innovation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/184398c1-22e8-46ad-8090-84f3d5c077d2.png" alt="SKRGenixAI Logo" class="nav__logo">
+                <span class="nav__title">SKRGenixAI</span>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link active" data-section="home">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" data-section="tools">AI Tools</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" data-section="news">News</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" data-section="tutorials">Tutorials</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" data-section="articles">Articles</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" data-section="apps">Latest AI Apps</a></li>
+                </ul>
+            </div>
+            <div class="nav__search">
+                <input type="text" placeholder="Search..." class="search__input" id="search-input">
+                <i class="fas fa-search search__icon"></i>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="home-section">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__featured">
+                        <img src="https://via.placeholder.com/800x400/1FB8CD/ffffff?text=AI+Business+Transformation" alt="Featured Article" class="hero__image">
+                        <div class="hero__text">
+                            <span class="hero__category">Featured</span>
+                            <h1 class="hero__title">Revolutionary AI Tools Transforming Business Operations in 2025</h1>
+                            <p class="hero__excerpt">Discover the latest AI tools that are revolutionizing how businesses operate, from automated customer service to predictive analytics.</p>
+                            <div class="hero__meta">
+                                <span class="hero__author">By SKRGenix Team</span>
+                                <span class="hero__date">October 10, 2025</span>
+                            </div>
+                            <button class="btn btn--primary hero__btn" onclick="openArticle(1)">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Grid -->
+        <section class="content">
+            <div class="container">
+                <div class="content__grid">
+                    <!-- Main Content Area -->
+                    <div class="content__main">
+                        <!-- Latest Articles Section (Default for home) -->
+                        <div class="section" id="articles-grid">
+                            <div class="section__header">
+                                <h2 class="section__title">Latest Articles</h2>
+                                <div class="section__filters">
+                                    <button class="filter-btn active" data-filter="all">All</button>
+                                    <button class="filter-btn" data-filter="tools">Tools</button>
+                                    <button class="filter-btn" data-filter="news">News</button>
+                                    <button class="filter-btn" data-filter="tutorials">Tutorials</button>
+                                </div>
+                            </div>
+                            <div class="articles__grid" id="articles-container">
+                                <!-- Articles will be loaded here via JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- AI Tools Section -->
+                        <div class="section hidden" id="tools-section">
+                            <div class="section__header">
+                                <h2 class="section__title">AI Tools</h2>
+                                <p class="section__subtitle">Discover the best AI tools for your needs</p>
+                            </div>
+                            <div class="tools__grid" id="tools-container">
+                                <!-- Tools will be loaded here via JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- News Section -->
+                        <div class="section hidden" id="news-section">
+                            <div class="section__header">
+                                <h2 class="section__title">Latest AI News</h2>
+                                <p class="section__subtitle">Stay updated with the latest developments in AI</p>
+                            </div>
+                            <div class="news__grid" id="news-container">
+                                <!-- News will be loaded here via JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Tutorials Section -->
+                        <div class="section hidden" id="tutorials-section">
+                            <div class="section__header">
+                                <h2 class="section__title">AI Tutorials</h2>
+                                <p class="section__subtitle">Learn AI with our comprehensive guides</p>
+                            </div>
+                            <div class="tutorials__grid" id="tutorials-container">
+                                <!-- Tutorials will be loaded here via JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Articles Section -->
+                        <div class="section hidden" id="detailed-articles-section">
+                            <div class="section__header">
+                                <h2 class="section__title">In-Depth Articles</h2>
+                                <p class="section__subtitle">Comprehensive analysis and insights</p>
+                            </div>
+                            <div class="articles__grid" id="detailed-articles-container">
+                                <!-- Articles will be loaded here via JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Latest AI Apps Section -->
+                        <div class="section hidden" id="apps-section">
+                            <div class="section__header">
+                                <h2 class="section__title">Latest AI Apps</h2>
+                                <p class="section__subtitle">Trending and new AI applications</p>
+                            </div>
+                            <div class="apps__grid" id="apps-container">
+                                <!-- Apps will be loaded here via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="sidebar">
+                        <!-- Trending Tools -->
+                        <div class="sidebar__section">
+                            <h3 class="sidebar__title">Trending Tools</h3>
+                            <div class="sidebar__content" id="trending-tools">
+                                <!-- Trending tools will be loaded here -->
+                            </div>
+                        </div>
+
+                        <!-- Latest News -->
+                        <div class="sidebar__section">
+                            <h3 class="sidebar__title">Latest News</h3>
+                            <div class="sidebar__content" id="sidebar-news">
+                                <!-- Latest news will be loaded here -->
+                            </div>
+                        </div>
+
+                        <!-- Newsletter Signup -->
+                        <div class="sidebar__section">
+                            <h3 class="sidebar__title">Stay Updated</h3>
+                            <div class="newsletter">
+                                <p>Get the latest AI news and updates delivered to your inbox.</p>
+                                <form class="newsletter__form">
+                                    <input type="email" placeholder="Enter your email" class="form-control">
+                                    <button type="submit" class="btn btn--primary btn--full-width">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Article Modal -->
+    <div class="modal hidden" id="article-modal">
+        <div class="modal__overlay" onclick="closeArticle()"></div>
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeArticle()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal__header">
+                <img src="" alt="" class="modal__image" id="modal-image">
+                <div class="modal__meta">
+                    <span class="modal__category" id="modal-category"></span>
+                    <h2 class="modal__title" id="modal-title"></h2>
+                    <div class="modal__info">
+                        <span class="modal__author" id="modal-author"></span>
+                        <span class="modal__date" id="modal-date"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__body">
+                <div class="modal__content-text" id="modal-content"></div>
+                <div class="modal__related">
+                    <h3>Related Articles</h3>
+                    <div class="related__grid" id="related-articles">
+                        <!-- Related articles will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__brand">
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/184398c1-22e8-46ad-8090-84f3d5c077d2.png" alt="SKRGenixAI Logo" class="footer__logo">
+                        <h3>SKRGenixAI</h3>
+                        <p>Your Gateway to AI Innovation</p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="#" data-section="home">Home</a></li>
+                        <li><a href="#" data-section="tools">AI Tools</a></li>
+                        <li><a href="#" data-section="news">News</a></li>
+                        <li><a href="#" data-section="tutorials">Tutorials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Categories</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Machine Learning</a></li>
+                        <li><a href="#">Natural Language Processing</a></li>
+                        <li><a href="#">Computer Vision</a></li>
+                        <li><a href="#">AI Ethics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Connect</h4>
+                    <div class="footer__social">
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="footer__contact">
+                        <p>Contact Us: info@skrgenixai.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 SKRGenixAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
